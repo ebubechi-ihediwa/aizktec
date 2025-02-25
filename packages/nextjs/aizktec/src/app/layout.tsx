@@ -31,7 +31,7 @@ export default function RootLayout({
       >
         <div className="bg-black text-white min-h-screen flex flex-col justify-between">
           <Navbar />
-          {children}
+          <main className="p-10">{children}</main>
           <Footer />
         </div>
       </body>

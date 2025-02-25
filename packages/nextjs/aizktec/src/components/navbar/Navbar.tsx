@@ -12,9 +12,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black text-white flex justify-center">
+    <nav className="bg-black text-white flex justify-center p-4">
       {/* Border Wrapper */}
-      <div className="flex flex-col bg-customGray w-full py-4 px-20 rounded-lg border border-white/30 mx-auto">
+      <div className="flex flex-col bg-customGray w-full p-4 rounded-lg border border-white/30 max-w-4xl mx-auto">
         <div className="flex items-center justify-between w-full">
           <h1 className="text-xl font-bold">AI-ZK-TEC</h1>
 
