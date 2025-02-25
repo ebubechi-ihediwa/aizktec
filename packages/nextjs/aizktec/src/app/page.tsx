@@ -6,8 +6,8 @@ import Footer from '@/components/footer/Footer';
 
 export default function HomePage() {
   return (
-    <div className="bg-black">
-      <div className="bg-black text-white min-h-screen flex flex-col justify-between mx-auto max-w-4xl px-4">
+    <div>
+      <div className="  min-h-screen flex flex-col justify-between mx-auto max-w-4xl px-4">
         <Navbar />
         <HomeContent />
         <Footer />

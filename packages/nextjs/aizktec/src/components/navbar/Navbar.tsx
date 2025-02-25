@@ -1,8 +1,16 @@
 'use client';
 
 import Link from 'next/link';
-import { Moon, X, Menu } from "lucide-react";
+import { Moon, X, Menu, Sun } from "lucide-react";
 import React, { useState } from 'react';
+// import { useTheme } from "next-themes"
+// import { Button } from '../ui/button';
+// import { DropdownMenu, 
+//   DropdownMenuContent,
+//   DropdownMenuItem,
+//   DropdownMenuTrigger, 
+// } from '@radix-ui/react-dropdown-menu';
+import { ModeToggle } from '../theme/mode-toggle';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,14 +20,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black text-white p-4 flex justify-center">
+    <nav className=" p-4 flex justify-center"> 
       {/* Border Wrapper */}
-      <div className="flex flex-col bg-customGray w-full max-w-4xl p-4 rounded-lg border border-white/30 mx-auto">
+      <div className="flex flex-col  w-full max-w-4xl p-4 rounded-lg border border-gray-700 mx-auto">
         <div className="flex items-center justify-between w-full">
           <h1 className="text-xl font-bold">AI-ZK-TEC</h1>
 
           {/* Navigation Links - Desktop */}
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex space-x-6 ">
             <Link href="/">Home</Link>
             <Link href="/data-rights">Data Rights</Link>
             <Link href="/compliance">Compliance</Link>
@@ -28,10 +36,8 @@ const Navbar = () => {
 
           {/* Buttons - Desktop */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="p-2 rounded-md border border-white/30 bg-black hover:bg-gray-800">
-              <Moon className="w-6 h-6 text-white" />
-            </button>
-            <button className="bg-black px-4 py-2 rounded border border-white/30 hover:bg-gray-800">
+            <ModeToggle/>
+            <button className=" px-4 py-2 rounded border border-gray-300 ">
               Connect
             </button>
           </div>
