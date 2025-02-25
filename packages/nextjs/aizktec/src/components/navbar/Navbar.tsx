@@ -1,15 +1,8 @@
-'use client';
+"use client";
 
 import Link from 'next/link';
 import { Moon, X, Menu, Sun } from "lucide-react";
 import React, { useState } from 'react';
-// import { useTheme } from "next-themes"
-// import { Button } from '../ui/button';
-// import { DropdownMenu, 
-//   DropdownMenuContent,
-//   DropdownMenuItem,
-//   DropdownMenuTrigger, 
-// } from '@radix-ui/react-dropdown-menu';
 import { ModeToggle } from '../theme/mode-toggle';
 
 const Navbar = () => {
@@ -44,7 +37,11 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button className="md:hidden p-2" onClick={toggleMenu}>
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
@@ -52,10 +49,27 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden flex flex-col mt-4 space-y-4">
             <div className="flex flex-col space-y-2">
-              <Link href="/" className="py-2 px-3 hover:bg-gray-800 rounded">Home</Link>
-              <Link href="/data-rights" className="py-2 px-3 hover:bg-gray-800 rounded">Data Rights</Link>
-              <Link href="/compliance" className="py-2 px-3 hover:bg-gray-800 rounded">Compliance</Link>
-              <Link href="/audit" className="py-2 px-3 hover:bg-gray-800 rounded">Audit</Link>
+              <Link href="/" className="py-2 px-3 hover:bg-gray-800 rounded">
+                Home
+              </Link>
+              <Link
+                href="/data-rights"
+                className="py-2 px-3 hover:bg-gray-800 rounded"
+              >
+                Data Rights
+              </Link>
+              <Link
+                href="/compliance"
+                className="py-2 px-3 hover:bg-gray-800 rounded"
+              >
+                Compliance
+              </Link>
+              <Link
+                href="/audit"
+                className="py-2 px-3 hover:bg-gray-800 rounded"
+              >
+                Audit
+              </Link>
             </div>
             <div className="flex items-center space-x-4 pt-2 border-t border-white/10">
               <button className="p-2 rounded-md border border-white/30 bg-black hover:bg-gray-800">

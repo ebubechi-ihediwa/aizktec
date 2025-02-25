@@ -1,8 +1,6 @@
-'use client';
-
-import Navbar from '@/components/navbar/Navbar';
-import HomeContent from '@/components/home/HomeContent';
-import Footer from '@/components/footer/Footer';
+import HomeContent from "@/components/home/HomeContent";
+import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/footer/Footer";
 
 export default function HomePage() {
   return (

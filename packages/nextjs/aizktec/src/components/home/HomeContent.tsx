@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import FeatureCard from '@/components/cards/FeatureCard';
 
 const HomeContent = () => {
@@ -8,7 +7,7 @@ const HomeContent = () => {
             <div className="flex items-center justify-center">
                 <div className="mt-8 font-semibold p-6 rounded-lg border border-border bg-card text-card-foreground w-fit">
                     <p>Revolutionizing data privacy and compliance with Artificial Intelligence,</p>
-                    <p>Zero-Knowledge proofs, and the Aztec ecosystem on Ethereum's L2.</p>
+                    <p>Zero-Knowledge proofs, and the Aztec ecosystem on Ethereum&apos;s L2.</p>
                 </div>
             </div>
 
