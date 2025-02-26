@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 interface FeatureCardProps {
     title: string;
@@ -8,16 +10,17 @@ interface FeatureCardProps {
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, link }) => {
     return (
-        <div className="p-6 rounded-lg text-left border border-border bg-card text-card-foreground flex flex-col justify-between h-full">
-            <h3 className="text-xl font-bold">{title}</h3>
-            <p className="text-muted-foreground mt-2">{description}</p>
-            <Link 
-                href={link} 
-                className="mt-9 inline-block w-full px-4 py-2 text-center rounded bg-primary text-primary-foreground hover:bg-primary/90 transition"
-            >
-                Learn more
-            </Link>
-        </div>
+        <Card className="h-full flex flex-col dark:bg-black/50 bg-gray-50 dark:border-white/30 border-black/30">
+            <CardHeader>
+                <CardTitle className="dark:text-white text-black">{title}</CardTitle>
+                <CardDescription className="dark:text-gray-300 text-gray-600">{description}</CardDescription>
+            </CardHeader>
+            <CardFooter className="mt-auto pt-6">
+                <Button asChild variant="outline" className="w-full dark:border-white/30 border-black/30 dark:hover:bg-white/10 hover:bg-black/10">
+                    <Link href={link}>Learn more</Link>
+                </Button>
+            </CardFooter>
+        </Card>
     );
 };
 

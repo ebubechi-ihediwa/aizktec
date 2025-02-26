@@ -1,17 +1,22 @@
 import FeatureCard from '@/components/cards/FeatureCard';
+import { Button } from "@/components/ui/button";
 
 const HomeContent = () => {
     return (
-        <main className="text-center p-10 bg-background text-foreground">
-            <h2 className="text-3xl font-bold">Welcome to AI-ZK-TEC</h2>
-            <div className="flex items-center justify-center">
-                <div className="mt-8 font-semibold p-6 rounded-lg border border-border bg-card text-card-foreground w-fit">
-                    <p>Revolutionizing data privacy and compliance with Artificial Intelligence,</p>
-                    <p>Zero-Knowledge proofs, and the Aztec ecosystem on Ethereum&apos;s L2.</p>
+        <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight">Welcome to AI-ZK-TEC</h1>
+            
+            <div className="flex items-center justify-center mt-8">
+                <div className="dark:bg-black/50 bg-gray-50 p-6 rounded-lg border dark:border-white/30 border-black/30">
+                    <p className="text-lg dark:text-gray-300 text-gray-600">
+                        Revolutionizing data privacy and compliance with Artificial Intelligence,
+                        <br />
+                        Zero-Knowledge proofs, and the Aztec ecosystem on Ethereum&apos;s L2.
+                    </p>
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
                 <FeatureCard
                     title="Data Rights Management"
                     description="Upload your data, set permissions, and monitor usage."
@@ -29,10 +34,10 @@ const HomeContent = () => {
                 />
             </div>
 
-            <button className="mt-6 px-6 py-2 rounded font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition">
-                Get Started
-            </button>
-        </main>
+            <div className="mt-12">
+                <Button size="lg">Get Started</Button>
+            </div>
+        </div>
     );
 };
 
