@@ -119,27 +119,35 @@ Once the chatbot is set up, you can interact with it by typing questions related
   - _"What’s the best way to handle errors in Next.js?"_
 
 ```javascript
-import { useState } from "react";
+import { openai } from "@ai-sdk/openai";
+import { streamText } from "ai";
 
-export default function Home() {
-  const [input, setInput] = useState("");
-  const [messages, setMessages] = useState([]);
+// Allow streaming responses up to 30 seconds
+export const maxDuration = 30;
 
-  const handleSend = async () => {
-    if (!input.trim()) return;
+export async function POST(req: Request) {
+  try {
+    const { messages } = await req.json();
 
-    const userMessage = { role: "user", content: input };
-    setMessages((prev) => [...prev, userMessage]);
-
-    const response = await fetch("/api/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: input }),
+    const result = streamText({
+      model: openai("gpt-4-turbo"),
+      system:
+        "You are an AI development assistant focused on aizktec. Provide helpful and concise answers about AI development, with code examples when appropriate.",
+      messages,
     });
 
-    const data = await response.json();
-    const botMessage = { role: "bot", content: data.reply };
-    setMessages((prev) => [...prev, botMessage]);
-
-    set
+    return result.toDataStreamResponse();
+  } catch (error) {
+    console.error("Error in chat API:", error);
+    return new Response(
+      JSON.stringify({
+        error: "An error occurred while processing your request.",
+      }),
+      {
+        status: 500,
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+  }
+}
 ```
