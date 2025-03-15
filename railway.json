@@ -1,0 +1,12 @@
+{
+    "version": 2,
+    "build": {
+      "builder": "NIXPACKS",
+      "buildCommand": "cd packages/nextjs/aizktec && bun install && bun run build"
+    },
+    "deploy": {
+      "startCommand": "cd packages/nextjs/aizktec && bun run start",
+      "restartPolicyType": "ON_FAILURE",
+      "restartPolicyMaxRetries": 10
+    }
+  }
