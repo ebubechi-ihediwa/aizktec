@@ -1,0 +1,25 @@
+// .cursorrules file for defining cursor behavior and styles
+
+// Overview 🚀
+// This file defines the cursor behavior and styles to be used within the project.
+// It adheres to best practices for cursor styling and behavior.
+
+// Cursor Styles 🎨
+// Define the default cursor style
+cursor: default;
+
+// Define the pointer cursor style for interactive elements
+interactive-cursor: pointer;
+
+// Define custom cursor styles for specific components
+custom-cursor: url('path/to/custom-cursor.png'), auto;
+
+// Error Handling 🛠️
+// Ensure that cursor styles are applied correctly and fallback to default if not
+fallback-cursor: default;
+
+// Maintenance 📝
+// This file should be updated as new cursor styles are introduced or modified.
+// Ensure that all styles are documented and adhere to project guidelines.
+
+// End of .cursorrules file 🎉 
