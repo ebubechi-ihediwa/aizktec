@@ -1,0 +1,10 @@
+---
+description: Best practices for using AI SDK with OpenAI
+globs: **/*.{ts,tsx}
+alwaysApply: false
+---
+
+- Implement proper error handling and rate limiting for API requests
+- Use streaming responses for better user experience in long-running tasks
+- Cache API responses where appropriate to reduce costs and improve performance
+- Implement proper security measures for handling API keys and sensitive data

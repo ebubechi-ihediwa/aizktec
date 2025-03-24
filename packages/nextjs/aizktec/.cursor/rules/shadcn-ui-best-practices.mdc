@@ -1,0 +1,10 @@
+---
+description: Guidelines for using Shadcn UI components effectively
+globs: **/*.{ts,tsx}
+alwaysApply: false
+---
+
+- Follow Shadcn UI's component naming conventions for consistency
+- Use Shadcn UI's built-in accessibility features and props
+- Customize Shadcn UI components using the provided API rather than modifying source
+- Utilize Shadcn UI's dark mode support for seamless theming

@@ -1,0 +1,10 @@
+---
+description: Guidelines for using ESLint to maintain code quality
+globs: **/*.{ts,tsx,js,jsx}
+alwaysApply: false
+---
+
+- Configure ESLint to use the recommended rules for your project's ecosystem
+- Extend ESLint configuration with plugins relevant to your tech stack
+- Use ESLint's auto-fix feature to automatically resolve common issues
+- Regularly update ESLint and its plugins to benefit from the latest best practices
