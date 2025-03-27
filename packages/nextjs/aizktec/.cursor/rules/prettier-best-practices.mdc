@@ -1,0 +1,10 @@
+---
+description: Best practices for using Prettier to enforce consistent code formatting
+globs: **/*.{ts,tsx,js,jsx}
+alwaysApply: false
+---
+
+- Integrate Prettier with your IDE for real-time formatting
+- Configure Prettier to work alongside ESLint for a seamless development experience
+- Use Prettier's ignore files to exclude specific files or directories from formatting
+- Set up Prettier in your CI/CD pipeline to ensure consistent formatting across the team
